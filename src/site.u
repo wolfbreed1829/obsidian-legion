@@ -27,6 +27,13 @@ legion.header current =
     ++ legion.navLink current "build.html" "Start building"
     ++ "<span class=\"nav-join\">" ++ legion.navLink current "join.html" "Join the Legion ↗" ++ "</span></nav></header>"
 
+legion.motionLayer : Text
+legion.motionLayer =
+  """
+  <canvas class="ambient-field" id="ambient-field" aria-hidden="true"></canvas>
+  <button class="motion-toggle mono" id="motion-toggle" type="button" aria-label="Pause animations" aria-pressed="false" hidden><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span class="motion-label">Motion on</span></button>
+  """
+
 legion.footer : Text
 legion.footer =
   """
@@ -45,8 +52,8 @@ legion.document file title description body =
     ++ "<link rel=\"canonical\" href=\"https://wolfbreed1829.github.io/obsidian-legion/" ++ (if file == "index.html" then "" else file) ++ "\">"
     ++ "<meta property=\"og:title\" content=\"" ++ legion.escape title ++ "\"><meta property=\"og:description\" content=\"" ++ legion.escape description ++ "\"><meta property=\"og:type\" content=\"website\">"
     ++ "<meta property=\"og:url\" content=\"https://wolfbreed1829.github.io/obsidian-legion/" ++ (if file == "index.html" then "" else file) ++ "\"><meta property=\"og:image\" content=\"https://wolfbreed1829.github.io/obsidian-legion/assets/obsidian-legion-eagle.jpg\">"
-    ++ "<link rel=\"icon\" type=\"image/jpeg\" href=\"assets/obsidian-legion-eagle.jpg\"><link rel=\"stylesheet\" href=\"styles.css?v=chapters-1\"><script src=\"site.js?v=chapters-1\" defer></script></head><body>"
-    ++ legion.header file ++ "<main id=\"main\">" ++ body ++ "</main>" ++ legion.footer ++ "</body></html>"
+    ++ "<link rel=\"icon\" type=\"image/jpeg\" href=\"assets/obsidian-legion-eagle.jpg\"><link rel=\"stylesheet\" href=\"styles.css?v=motion-1\"><link rel=\"stylesheet\" href=\"motion.css?v=motion-1\"><script src=\"site.js?v=motion-1\" defer></script><script src=\"motion.js?v=motion-1\" defer></script></head><body>"
+    ++ legion.header file ++ legion.motionLayer ++ "<main id=\"main\">" ++ body ++ "</main>" ++ legion.footer ++ "</body></html>"
 
 legion.homeBody : Text
 legion.homeBody =
@@ -54,14 +61,14 @@ legion.homeBody =
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-copy">
       <p class="eyebrow mono"><span class="status-dot"></span> INDEPENDENT MINDS. SHARED AMBITION.</p>
-      <h1 id="hero-title">YOUR IDEAS.<br>YOUR SYSTEMS.<br><span class="outline">YOUR RULES.</span></h1>
+      <h1 id="hero-title"><span class="hero-line">YOUR IDEAS.</span> <span class="hero-line">YOUR SYSTEMS.</span> <span class="hero-line outline">YOUR RULES.</span></h1>
       <p class="hero-description">For the ones who would rather build it themselves.<br class="desktop-break"> Programmers. Systems engineers. System architects.<br class="desktop-break"> One collective. Endless possibility.</p>
       <div class="hero-actions"><a class="button button-light" href="join.html">Become a Legionnaire <span aria-hidden="true">↗</span></a><a class="text-link" href="build.html">Find your next build <span aria-hidden="true">↗</span></a></div>
       <p class="hero-footnote mono">BUILT WITH UNISON <span>/</span> MADE FOR BUILDERS</p>
     </div>
     <figure class="hero-art">
       <span class="art-coordinate mono" aria-hidden="true">FIG. 001 — THE LEGION</span>
-      <div class="emblem-frame"><img class="hero-emblem" src="assets/obsidian-legion-eagle.jpg" alt="Obsidian Legion: a black and silver eagle with outstretched wings, a globe, and glowing red accents" width="1254" height="1254" fetchpriority="high"><span class="art-cross cross-top" aria-hidden="true">+</span><span class="art-cross cross-bottom" aria-hidden="true">+</span></div>
+      <div class="emblem-frame"><div class="crest-orbits" aria-hidden="true"><span class="crest-orbit orbit-one"></span><span class="crest-orbit orbit-two"></span><span class="crest-orbit orbit-three"></span></div><img class="hero-emblem" src="assets/obsidian-legion-eagle.jpg" alt="Obsidian Legion: a black and silver eagle with outstretched wings, a globe, and glowing red accents" width="1254" height="1254" fetchpriority="high"><span class="art-cross cross-top" aria-hidden="true">+</span><span class="art-cross cross-bottom" aria-hidden="true">+</span></div>
       <figcaption class="mono"><span>FORGED FROM INDEPENDENT MINDS</span><a href="assets/obsidian-legion-eagle.jpg" download="obsidian-legion-logo.jpg" aria-label="Download the Obsidian Legion crest">↓</a></figcaption>
     </figure>
   </section>

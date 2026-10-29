@@ -29,6 +29,7 @@ Open http://127.0.0.1:4187. There are no npm dependencies to install. The first 
 - `src/site.u` — Unison source of truth for page content and HTML generation.
 - `public/styles.css` — responsive black visual identity and reduced-motion support.
 - `public/site.js` — keyboard-accessible tabs and mobile navigation.
+- `public/motion.css` and `public/motion.js` — crest orbits, embers, entrances, hover lighting, and the persistent motion toggle. Motion honors the system's reduced-motion preference; the particle field stops while the document is hidden. All reading and navigation work without these enhancements.
 - `public/assets/obsidian-legion-eagle.jpg` — the supplied eagle logo, preserved unchanged.
 - `scripts/build.mjs` — runs the UCM transcript and copies public assets.
 - `scripts/pages.mjs` — maps each public document to its Unison entry point.
