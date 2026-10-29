@@ -13,7 +13,7 @@ for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
   const target = match[1];
   if (target === '#') continue;
   if (target.startsWith('#')) assert(ids.includes(target.slice(1)), `Missing anchor ${target}`);
-  else if (!target.startsWith('https://')) await access(path.join('dist', target));
+  else if (!target.startsWith('https://')) await access(path.join('dist', target.split('?')[0]));
 }
 for (const match of html.matchAll(/aria-(?:controls|labelledby)="([^"]+)"/g)) {
   assert(ids.includes(match[1]), `Missing accessible control target ${match[1]}`);
