@@ -1,8 +1,8 @@
 # Obsidian Legion brand
 
-Pure black background (`#000000`), off-white typography, silver details, and red accents drawn from the supplied eagle artwork. Use `#ef3b45` for small accent details and `#b91b26` for buttons with white text.
+Pure black background (`#000000`) with burnished bronze typography, warm taupe body text, and fine bronze borders. Use `#c39a6b` for bronze accents, `#dfbd91` for highlighted headings, `#b4a38e` for body text, and `#968672` for secondary text. Buttons use a subtle bronze finish with nearly black labels. Serif display typography and restrained spacing give the page an engraved, premium character.
 
-Active asset: `public/assets/obsidian-legion-eagle.jpg`. The project owner supplied this black and silver eagle, globe, and red illuminated crest. The JPEG is copied unchanged and is used in the hero, header, footer, favicon, social preview, and logo download.
+Active asset: `public/assets/obsidian-legion-eagle.jpg`. The project owner supplied this black and silver eagle, globe, and red illuminated crest. Its original colors provide the image accent against the bronze interface. The JPEG is copied unchanged and is used in the hero, header, footer, favicon, social preview, and logo download.
 
 ## Earlier concept
 
