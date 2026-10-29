@@ -32,3 +32,15 @@ The GitHub Actions workflow installs the pinned UCM runtime, compiles the Unison
 ## Brand asset
 
 The active logo is the eagle artwork supplied by the project owner. The original JPEG is preserved unchanged. `BRAND.md` documents the current identity and the earlier generated concept, which remains available in the assets directory.
+# Legionnaire applications
+
+The Unison-generated public site includes a **Become a Legionnaire** form. Applications are submitted over HTTPS to a separate persistent service because GitHub Pages does not execute server code.
+
+- Signup: https://wolfbreed1829.github.io/obsidian-legion/#join
+- Administration: https://obsidian-legion-enlistment.littlecrowsbe.chatgpt.site/admin
+- Community: https://github.com/Obsidian-Legion/community
+
+Administration uses GitHub OAuth and permits only GitHub account ID `246154361` (`wolfbreed1829`). Application records, private notes, and hashed admin sessions live in the service database, not this repository. Accepting an application records a decision; GitHub organization invitations remain a separate owner action.
+
+The companion source is managed as its own Sites repository in the locally ignored `legionnaire-service/` directory. Runtime credentials are stored in Sites environment secrets. Never put OAuth secrets, applicant data, or session tokens in this public repository.
+

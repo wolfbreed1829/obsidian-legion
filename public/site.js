@@ -4,6 +4,43 @@ function closeMenu() {
   menu.setAttribute('aria-expanded', 'false');
   navigation.classList.remove('is-open');
 }
+
+const signupForm = document.querySelector('#legionnaire-form');
+if (signupForm) {
+  let sending = false;
+  signupForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (sending || !signupForm.reportValidity()) return;
+    sending = true;
+    const button = signupForm.querySelector('button[type="submit"]');
+    const label = button.querySelector('span');
+    const error = document.querySelector('#signup-error');
+    button.disabled = true;
+    label.textContent = 'Submitting…';
+    error.hidden = true;
+    try {
+      const response = await fetch(signupForm.action, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(signupForm))),
+        signal: AbortSignal.timeout(20000),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || 'We couldn’t save your application. Please try again.');
+      signupForm.hidden = true;
+      const success = document.querySelector('#signup-success');
+      success.hidden = false;
+      success.focus();
+    } catch (reason) {
+      error.textContent = reason instanceof Error && reason.name !== 'TimeoutError' && reason.name !== 'TypeError'
+        ? reason.message : 'We couldn’t confirm submission. Please retry; your email prevents duplicate applications.';
+      error.hidden = false;
+    } finally {
+      sending = false;
+      button.disabled = false;
+      label.textContent = 'Apply to become a Legionnaire';
+    }
+  });
+}
 menu.addEventListener('click', () => {
   const expanded = menu.getAttribute('aria-expanded') !== 'true';
   menu.setAttribute('aria-expanded', String(expanded));

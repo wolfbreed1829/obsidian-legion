@@ -8,3 +8,4 @@ node_modules/
 .unisonHistory
 *.log
 .DS_Store
+legionnaire-service/
