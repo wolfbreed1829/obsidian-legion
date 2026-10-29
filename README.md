@@ -40,7 +40,6 @@ The Unison-generated public site includes a **Become a Legionnaire** form. Appli
 - Administration: https://obsidian-legion-enlistment.littlecrowsbe.chatgpt.site/admin
 - Community: https://github.com/Obsidian-Legion/community
 
-Administration uses GitHub OAuth and permits only GitHub account ID `246154361` (`wolfbreed1829`). Application records, private notes, and hashed admin sessions live in the service database, not this repository. Accepting an application records a decision; GitHub organization invitations remain a separate owner action.
+Administration uses GitHub OAuth and a server-side allowlist of approved GitHub account IDs. Application records, private notes, and hashed admin sessions live in the service database, not this repository. Accepting an application records a decision; GitHub organization invitations remain a separate owner action.
 
 The companion source is managed as its own Sites repository in the locally ignored `legionnaire-service/` directory. Runtime credentials are stored in Sites environment secrets. Never put OAuth secrets, applicant data, or session tokens in this public repository.
-
