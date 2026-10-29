@@ -1,6 +1,7 @@
 import { spawnSync } from 'node:child_process';
 import { mkdir, readFile, writeFile, cp } from 'node:fs/promises';
 import path from 'node:path';
+import { pages } from './pages.mjs';
 
 process.chdir(path.resolve(import.meta.dirname, '..'));
 await mkdir('.ucm', { recursive: true });
@@ -15,7 +16,7 @@ const transcript = [
   '```unison', source, '```',
   '```ucm',
   'obsidian-legion/main> update',
-  'obsidian-legion/main> compile legion.main .ucm/site',
+  ...pages.map(({ file, entry }) => `obsidian-legion/main> compile ${entry} .ucm/${file.replace('.html', '')}`),
   '```', ''
 ].join('\n');
 await writeFile('.ucm/build.md', transcript);
@@ -36,10 +37,12 @@ function ucm(args) {
 }
 console.log('Typechecking and compiling src/site.u with Unison...');
 ucm(['-C', '.ucm', 'transcript.in-place', '.ucm/build.md']);
-const html = ucm(['run.compiled', '.ucm/site.uc']).trim();
-if (!html.startsWith('<!doctype html>') || !html.endsWith('</html>')) {
-  throw new Error('The Unison program did not emit a complete HTML document.');
-}
 await cp('public', 'dist', { recursive: true });
-await writeFile('dist/index.html', html + '\n');
-console.log(`Built dist/index.html from Unison (${Buffer.byteLength(html)} bytes).`);
+for (const { file } of pages) {
+  const html = ucm(['run.compiled', `.ucm/${file.replace('.html', '')}.uc`]).trim();
+  if (!html.startsWith('<!doctype html>') || !html.endsWith('</html>')) {
+    throw new Error(`The Unison program did not emit a complete document for ${file}.`);
+  }
+  await writeFile(`dist/${file}`, html + '\n');
+  console.log(`Built dist/${file} from Unison (${Buffer.byteLength(html)} bytes).`);
+}

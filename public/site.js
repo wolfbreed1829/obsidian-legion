@@ -1,3 +1,14 @@
+// Preserve links shared before the site moved to separate documents.
+const legacyPages = { '#manifesto': 'ethos.html', '#collective': 'collective.html', '#build': 'build.html', '#join': 'join.html' };
+function redirectLegacyLink() {
+  const isHome = location.pathname.endsWith('/') || location.pathname.endsWith('/index.html');
+  if (isHome && legacyPages[location.hash]) {
+    location.replace(new URL(legacyPages[location.hash] + location.search, location.href));
+  }
+}
+redirectLegacyLink();
+window.addEventListener('hashchange', redirectLegacyLink);
+
 const menu = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.navigation');
 function closeMenu() {
