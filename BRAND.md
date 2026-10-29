@@ -1,8 +1,12 @@
 # Obsidian Legion brand
 
-Pure black background (`#000000`), off-white typography, muted silver details, and a geometric obsidian emblem. The three interlocking blades represent distinct disciplines building together.
+Pure black background (`#000000`), off-white typography, silver details, and red accents drawn from the supplied eagle artwork. Use `#ef3b45` for small accent details and `#b91b26` for buttons with white text.
 
-Asset: `public/assets/obsidian-legion.png`.
+Active asset: `public/assets/obsidian-legion-eagle.jpg`. The project owner supplied this black and silver eagle, globe, and red illuminated crest. The JPEG is copied unchanged and is used in the hero, header, footer, favicon, social preview, and logo download.
+
+## Earlier concept
+
+The original geometric concept remains at `public/assets/obsidian-legion.png` for reference. It is no longer the active site logo.
 
 Generated with the built-in image generation tool. Final prompt:
 

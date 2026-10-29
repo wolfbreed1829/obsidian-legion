@@ -77,17 +77,17 @@ legion.head =
     <meta property="og:description" content="Your ideas. Your systems. Your rules. A collective for independent builders.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wolfbreed1829.github.io/obsidian-legion/">
-    <meta property="og:image" content="https://wolfbreed1829.github.io/obsidian-legion/assets/obsidian-legion.png">
+    <meta property="og:image" content="https://wolfbreed1829.github.io/obsidian-legion/assets/obsidian-legion-eagle.jpg">
     <title>Obsidian Legion — Build on your own terms.</title>
-    <link rel="icon" type="image/png" href="assets/obsidian-legion.png">
-    <link rel="preload" href="assets/obsidian-legion.png" as="image">
+    <link rel="icon" type="image/jpeg" href="assets/obsidian-legion-eagle.jpg">
+    <link rel="preload" href="assets/obsidian-legion-eagle.jpg" as="image">
     <link rel="stylesheet" href="styles.css">
     <script src="site.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header wrap">
-      <a class="brand" href="#" aria-label="Obsidian Legion home"><img src="assets/obsidian-legion.png" alt="" width="48" height="48"><span>OBSIDIAN<span>LEGION</span></span></a>
+      <a class="brand" href="#" aria-label="Obsidian Legion home"><img src="assets/obsidian-legion-eagle.jpg" alt="" width="48" height="48"><span>OBSIDIAN<span>LEGION</span></span></a>
       <button class="menu-toggle mono" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
       <nav class="navigation" id="navigation" aria-label="Main navigation">
         <a href="#manifesto">The ethos</a><a href="#collective">The collective</a><a href="#build">Start building</a>
@@ -105,7 +105,7 @@ legion.head =
         </div>
         <figure class="hero-art">
           <span class="art-coordinate mono" aria-hidden="true">FIG. 001 — THE LEGION</span>
-          <div class="emblem-frame"><img class="hero-emblem" src="assets/obsidian-legion.png" alt="The Obsidian Legion emblem: interlocking black crystal blades with sharp silver edges" width="1280" height="1280" fetchpriority="high"><span class="art-cross cross-top" aria-hidden="true">+</span><span class="art-cross cross-bottom" aria-hidden="true">+</span></div>
+          <div class="emblem-frame"><img class="hero-emblem" src="assets/obsidian-legion-eagle.jpg" alt="Obsidian Legion: a black and silver eagle with outstretched wings, a globe, and glowing red accents" width="1254" height="1254" fetchpriority="high"><span class="art-cross cross-top" aria-hidden="true">+</span><span class="art-cross cross-bottom" aria-hidden="true">+</span></div>
           <figcaption class="mono"><span>FORGED FROM INDEPENDENT MINDS</span><span aria-hidden="true">↗</span></figcaption>
         </figure>
       </section>
@@ -142,7 +142,7 @@ legion.build =
       </section>
       <section class="join wrap section" id="join" aria-labelledby="join-title"><p class="eyebrow mono"><span class="status-dot"></span> YOUR NEXT CHAPTER STARTS WITH A COMMIT.</p><h2 id="join-title">BUILD FOR YOURSELF.<br><span class="outline">NOT BY YOURSELF.</span></h2><div class="join-bottom"><p>Bring an idea. Open an issue. Improve what's here.<br>Help define what the Obsidian Legion becomes.</p><a class="button button-light" href="https://github.com/wolfbreed1829/obsidian-legion">Build with the Legion <span aria-hidden="true">↗</span></a></div></section>
     </main>
-    <footer class="site-footer wrap"><a class="brand footer-brand" href="#" aria-label="Obsidian Legion home"><img src="assets/obsidian-legion.png" alt="" width="40" height="40"><span>OBSIDIAN<span>LEGION</span></span></a><p class="mono">INDEPENDENT BY DESIGN.</p><div><a href="https://github.com/wolfbreed1829/obsidian-legion">Source ↗</a><a href="https://www.unison-lang.org/">Built with Unison ↗</a><a href="assets/obsidian-legion.png" download="obsidian-legion-logo.png">Get the mark ↓</a></div></footer>
+    <footer class="site-footer wrap"><a class="brand footer-brand" href="#" aria-label="Obsidian Legion home"><img src="assets/obsidian-legion-eagle.jpg" alt="" width="40" height="40"><span>OBSIDIAN<span>LEGION</span></span></a><p class="mono">INDEPENDENT BY DESIGN.</p><div><a href="https://github.com/wolfbreed1829/obsidian-legion">Source ↗</a><a href="https://www.unison-lang.org/">Built with Unison ↗</a><a href="assets/obsidian-legion-eagle.jpg" download="obsidian-legion-logo.jpg">Get the mark ↓</a></div></footer>
     <noscript><style>.craft-tabs{display:none}.craft-panel[hidden]{display:grid!important}.craft-panel{border-bottom:1px solid #292929;padding-bottom:3rem}.menu-toggle{display:none}@media(max-width:760px){.navigation{display:flex!important;position:static;flex-wrap:wrap;width:100%}.site-header{flex-wrap:wrap}}</style></noscript>
   </body>
   </html>
