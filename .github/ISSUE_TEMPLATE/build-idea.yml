@@ -1,0 +1,28 @@
+name: Propose a build
+description: Share something you want to build with the Legion.
+title: 'Build idea: '
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What do you want to build?
+      description: Describe the problem and who the project would help.
+    validations:
+      required: true
+  - type: dropdown
+    id: discipline
+    attributes:
+      label: Where does it start?
+      options:
+        - Software
+        - Infrastructure
+        - Architecture
+        - A little of everything
+  - type: textarea
+    id: first-step
+    attributes:
+      label: What is the smallest useful first step?
+  - type: textarea
+    id: collaboration
+    attributes:
+      label: Where could other builders help?

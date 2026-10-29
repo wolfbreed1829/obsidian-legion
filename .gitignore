@@ -1,0 +1,10 @@
+.ucm/
+.tools/
+dist/
+artifacts/
+*.output.md
+node_modules/
+.playwright-mcp/
+.unisonHistory
+*.log
+.DS_Store
